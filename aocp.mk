@@ -15,24 +15,21 @@
 #
 
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/gsm.mk)
+$(call inherit-product, vendor/aocp/config/gsm.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := p5110
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 1280
-
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aocp/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/p5110/full_p5110.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := p5110
-PRODUCT_NAME := cm_p5110
+TARGET_BOOTANIMATION_NAME := bootanimation_1280_800
+PRODUCT_NAME := aocp_p5110
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-P5110
 PRODUCT_MANUFACTURER := samsung
