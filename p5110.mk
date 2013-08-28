@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/p5100/p51xx-common.mk)
+#$(call inherit-product, device/samsung/p5100/p51xx-common.mk)
 
 LOCAL_PATH := device/samsung/p5110
 
