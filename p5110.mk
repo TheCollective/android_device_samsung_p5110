@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-#$(call inherit-product, device/samsung/p5100/p51xx-common.mk)
+$(call inherit-product, device/samsung/p5100/p51xx-common.mk)
 
 LOCAL_PATH := device/samsung/p5110
 
@@ -24,6 +24,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/espresso10wifi \
 	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+
+# IRDA
+PRODUCT_PACKAGES += \
+    irda.piranha
 
 # Use the non-open-source parts, if they're present
 $(call inherit-product-if-exists, vendor/samsung/p51xx/p5110-vendor.mk)
